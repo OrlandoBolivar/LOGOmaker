@@ -2,9 +2,11 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 
+
+
 const generateSvg = ({Color, Shape, shapeColor}) =>
     `
-    <svg width="100" height="100">
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
     <${Shape} cx="50" cy="50" r="40" stroke="${Color}" stroke-width="4" fill="${shapeColor}" />
     </svg>
     `
@@ -22,7 +24,7 @@ inquirer
       Type: 'input',
       name: 'Shape',
       message: 'What shape would you like?',
-      default: 'type your answer'
+      choices: ['rectangle', 'circle', 'ellipse', 'line', 'polyline', 'polygone', 'path'],
   },
     {
       Type: 'input',
