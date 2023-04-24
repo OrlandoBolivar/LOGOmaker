@@ -12,6 +12,6 @@
     "jest": "^24.9.0"
   },
   "dependencies": {
-    "inquirer": "^9.1.5"
+    "inquirer": "^8.2.5"
   }
 }
